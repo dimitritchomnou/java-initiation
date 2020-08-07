@@ -1,0 +1,14 @@
+package projet1;
+
+import java.util.Scanner;
+
+public class Personne {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Hello World");
+		System.out.println("My name is Yaya");
+	}
+}

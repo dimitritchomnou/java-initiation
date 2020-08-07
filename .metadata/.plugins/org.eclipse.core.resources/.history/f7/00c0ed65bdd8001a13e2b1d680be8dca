@@ -1,0 +1,34 @@
+package projet1;
+
+import java.util.Scanner;
+
+public class Personne {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int i = 0;
+		//lecture d'entrer de clacier
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Votre Nom et Prenom :");
+		String str = sc.nextLine();
+		if(str != null) {
+			System.out.println("Vous avez saisi : " + str);
+		}else if(i == 0) {
+			System.out.println("Impossible de recupérer le 1er caractère");
+		}else {
+			System.out.println("Erreur de saisie");
+		}
+		
+		//recupération du 1er carac d'une chaine
+		System.out.println("Le premier caractère de la chaîne est : " + str.charAt(i));
+		
+		System.out.println("Quel age avez-vous ?");
+		int age = sc.nextInt();
+		if(age > 0) {
+			System.out.println("Vous avez saisi : " + age + " ans");
+		}else {
+			System.out.println("Erreur de saisie, pour l'age");
+		}
+		
+	}
+}
