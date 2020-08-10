@@ -32,7 +32,7 @@ public class Personne {
 		
 		//Boucle while et Structure switch
 		char reponse = 'O';
-		while(reponse == 'O') {
+		while(reponse == 'N') {
 			
 			System.out.println("Saisir une salutation : ");
 			String chaine = sc.nextLine();
@@ -49,16 +49,11 @@ public class Personne {
 				
 				//Sortie de la boucle 
 				reponse = ' ';// on réinitialise à vide
-				while(reponse != 'O' && reponse != 'N') {
-					System.out.println("Voulez-vous réessayer ? (O/N)");
+				while(reponse != '0' && reponse != 'N') {
+					System.out.println("Voulez-vous réessayer . (O/N)");
 					reponse = sc.nextLine().charAt(0);
 				}
 				
-		}
-		
-		//Boucle For
-		for(int i = 0, j=2 ; (i<10 && j<6); i++, j +=2) {
-			System.out.println("i  = " + i + " et J = "+ j);
 		}
 		
 		System.out.println("Au revoir ...");
