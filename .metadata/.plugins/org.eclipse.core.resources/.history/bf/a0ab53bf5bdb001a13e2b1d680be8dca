@@ -1,0 +1,107 @@
+package projet1;
+
+import java.util.Scanner;
+
+public class Personne {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//lecture d'entrer du clavier
+		Scanner sc = new Scanner(System.in);
+		/*System.out.println("Votre Nom et Prenom :");
+		String str = sc.nextLine();
+		if(str.length() != 0) {
+			System.out.println("Vous avez saisi : " + str);
+		}else {
+			System.out.println("Erreur de saisie");
+		}
+		
+		//recupération du 1er caractère d'une chaine
+		System.out.println("Le premier caractère de la chaîne est : " + str.charAt(0));
+		
+		System.out.println("Quel age avez-vous ?");
+		int age = sc.nextInt();
+		if(age > 0) {
+			System.out.println("Vous avez saisi : " + age + " ans");
+		}else {
+			System.out.println("Erreur de saisie, pour l'age");
+		}
+		//permet d'éviter une erreur après utilisation de nextInt()
+		sc.nextLine();
+		
+		//Boucle while et Structure switch
+		char reponse = 'O';
+		while(reponse == 'O') {
+			
+			System.out.println("Saisir une salutation : ");
+			String chaine = sc.nextLine();
+				switch(chaine.toUpperCase()) {//Chaine en Majuscule
+					case "BONJOUR":
+						System.out.println("Bonjour monsieur : " + str);
+						break;
+					case "BONSOIR":
+						System.out.println("Bonsoir monsieur : " + str);
+						break;
+					default:
+						System.out.println("Hello");
+				}
+				
+				//Sortie de la boucle 
+				reponse = ' ';// on réinitialise à vide
+				while(reponse != 'O' && reponse != 'N') {
+					System.out.println("Voulez-vous réessayer ? (O/N)");
+					reponse = sc.nextLine().charAt(0);
+				}
+				
+		}
+		
+		//Boucle For
+		for(int i = 0, j=2 ; (i<10 && j<6); i++, j +=2) {
+			System.out.println("i  = " + i + " et J = "+ j);
+		}
+		
+		
+		System.out.println("Find de la boucle ...");*/
+		
+		//TP Conversion Celsius en Fahrenheit
+		double celsius = 0, fahrenheit = 0;
+		int choix = 1;
+		char rpse = 'O';
+		
+		while(celsius == 0 && fahrenheit == 0 && rpse == 'O') {
+			System.out.println("Choisir un mode de conversion");
+			System.out.println("1- Convertisseur Celsius - Fahrenheit");
+			System.out.println("2- Convertisseur Fahrenheit - Celsius");
+			choix = sc.nextInt();
+			switch(choix) {
+				case 1:
+					System.out.println("Température à convertir : ");
+					celsius = sc.nextInt();
+					fahrenheit = (celsius * 9/5) + 32;
+					System.out.println(celsius + " °C correspond à " + fahrenheit + " °F");
+					break;
+				case 2:
+					System.out.println("Température à convertir : ");
+					fahrenheit = sc.nextInt();
+					celsius = (fahrenheit - 32)*5/9;
+					System.out.println(fahrenheit + " °F correspond à " + celsius + " °C");
+					break;
+				default:
+					System.out.println("Impossible de convertir");
+			}
+			
+			rpse = ' ';
+			sc.nextLine();
+			while(rpse != 'O' && rpse != 'N') {
+				System.out.println("Souhaitez-vous convertir une autre température ? (O/N)");
+				rpse = sc.nextLine().charAt(0);
+				celsius = 0;
+				fahrenheit = 0;
+			}
+		}
+		
+		System.out.println("Fin conversion");
+			
+	}
+}

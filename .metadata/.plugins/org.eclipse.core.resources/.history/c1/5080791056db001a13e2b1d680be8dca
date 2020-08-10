@@ -1,0 +1,75 @@
+package projet1;
+
+import java.util.Scanner;
+
+public class Personne {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//lecture d'entrer du clavier
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Votre Nom et Prenom :");
+		String str = sc.nextLine();
+		if(str.length() != 0) {
+			System.out.println("Vous avez saisi : " + str);
+		}else {
+			System.out.println("Erreur de saisie");
+		}
+		
+		//recupération du 1er caractère d'une chaine
+		System.out.println("Le premier caractère de la chaîne est : " + str.charAt(0));
+		
+		System.out.println("Quel age avez-vous ?");
+		int age = sc.nextInt();
+		if(age > 0) {
+			System.out.println("Vous avez saisi : " + age + " ans");
+		}else {
+			System.out.println("Erreur de saisie, pour l'age");
+		}
+		//permet d'éviter une erreur après utilisation de nextInt()
+		sc.nextLine();
+		
+		//Boucle while et Structure switch
+		char reponse = 'O';
+		while(reponse == 'O') {
+			
+			System.out.println("Saisir une salutation : ");
+			String chaine = sc.nextLine();
+				switch(chaine.toUpperCase()) {//Chaine en Majuscule
+					case "BONJOUR":
+						System.out.println("Bonjour monsieur : " + str);
+						break;
+					case "BONSOIR":
+						System.out.println("Bonsoir monsieur : " + str);
+						break;
+					default:
+						System.out.println("Hello");
+				}
+				
+				//Sortie de la boucle 
+				reponse = ' ';// on réinitialise à vide
+				while(reponse != 'O' && reponse != 'N') {
+					System.out.println("Voulez-vous réessayer ? (O/N)");
+					reponse = sc.nextLine().charAt(0);
+				}
+				
+		}
+		
+		//Boucle For
+		for(int i = 0, j=2 ; (i<10 && j<6); i++, j +=2) {
+			System.out.println("i  = " + i + " et J = "+ j);
+		}
+		
+		
+		System.out.println("Find de la boucle ...");
+		
+		//TP Conversion Celsius en Fahrenheit
+		int celsius = 0, fahrenheit = 0;
+		System.out.println("Saissir une valeur celsius : ");
+		celsius = sc.nextInt();
+		fahrenheit = 9/5 * celsius + 32;
+		
+			
+	}
+}
