@@ -65,7 +65,7 @@ public class Personne {
 		System.out.println("Find de la boucle ...");*/
 		
 		//TP Conversion Celsius en Fahrenheit
-		double celsius = 0.0, fahrenheit = 0.0;
+		/*double celsius = 0.0, fahrenheit = 0.0;
 		int choix = 1;
 		char rpse = 'O';
 		
@@ -128,37 +128,27 @@ public class Personne {
 			}
 		}
 		
-		System.out.println("Fin de la recherche dans le tableau ");
+		System.out.println("Fin de la recherche dans le tableau ");*/
 		
 		int tabsEntiers[][] = {{0, 2, 4, 6, 8},{1, 3, 5, 7, 9}};
 		
-//		for(int i = 0; i < 2; i++) {
-//			for(int j = 0; j < 5 ; j++) {
-//				System.out.println("Tabs["+i+"]["+j+"] = "+tabsEntiers[i][j]);
-//			}
-//			
-//			System.out.println("-------------------------");
-//		}
-		System.out.println("----------Tableau 2 dimensions ----------");	
+		for(int i = 0; i < 2; i++) {
+			for(int j = 0; j < 5 ; j++) {
+				System.out.println("Tabs["+i+"]["+j+"] = "+tabsEntiers[i][j]);
+			}
+			
+			System.out.println("-------------------------");
+		}
 		
 		int i = 0, j = 0;
 		for(int sousTab[] : tabsEntiers) {
 			i = 0;
 			for(int intElt : sousTab) {
 				System.out.println("La valeur de la nouvelle boucle est : " + intElt);
-				System.out.println("Tabs["+j+"]["+i+"] = "+tabsEntiers[j][i]);
-				i++;
+				System.out.println("Tabs["+i+"]["+j+"] = "+tabsEntiers[i][j]);
 			}
-			j++;
 		}
-		
-		System.out.println("----------Tableau simple une dimension ----------");
-		String chaine[] = {"Ariane", "Ludo", "Juju", "Dima", "Yaya"};
-		int k = 0;
-		for(String elt : chaine) {
-			System.out.println("chaine["+k+"] = " + elt);
-			k++;
-		}
+			
 	}
 	
 	

@@ -65,7 +65,7 @@ public class Personne {
 		System.out.println("Find de la boucle ...");*/
 		
 		//TP Conversion Celsius en Fahrenheit
-		double celsius = 0.0, fahrenheit = 0.0;
+		/*double celsius = 0.0, fahrenheit = 0.0;
 		int choix = 1;
 		char rpse = 'O';
 		
@@ -128,7 +128,7 @@ public class Personne {
 			}
 		}
 		
-		System.out.println("Fin de la recherche dans le tableau ");
+		System.out.println("Fin de la recherche dans le tableau ");*/
 		
 		int tabsEntiers[][] = {{0, 2, 4, 6, 8},{1, 3, 5, 7, 9}};
 		
@@ -139,7 +139,7 @@ public class Personne {
 //			
 //			System.out.println("-------------------------");
 //		}
-		System.out.println("----------Tableau 2 dimensions ----------");	
+		
 		
 		int i = 0, j = 0;
 		for(int sousTab[] : tabsEntiers) {
@@ -152,7 +152,7 @@ public class Personne {
 			j++;
 		}
 		
-		System.out.println("----------Tableau simple une dimension ----------");
+		System.out.println("Tableau simple une dimension");
 		String chaine[] = {"Ariane", "Ludo", "Juju", "Dima", "Yaya"};
 		int k = 0;
 		for(String elt : chaine) {
