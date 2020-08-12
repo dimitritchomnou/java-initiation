@@ -154,11 +154,12 @@ public class Personne {
 		
 		System.out.println("----------Tableau simple une dimension ----------");
 		String chaine[] = {"Ariane", "Ludo", "Juju", "Dima", "Yaya"};
-	
-		System.out.println("----------Call Method Table Content ----------");
-		//call method
+//		int k = 0;
+//		for(String elt : chaine) {
+//			System.out.println("chaine["+k+"] = " + elt);
+//			k++;
+//		}
 		tableContent(chaine);
-		System.out.println(tableContentToString(chaine));
 	}
 	
 	
@@ -172,14 +173,5 @@ public class Personne {
 			System.out.println("chaine["+k+"] = " + elt);
 			k++;
 		}
-	}
-	
-	public static String tableContentToString(String[] stringTab) {
-		String values = "";
-		for(String elt : stringTab) {
-			 values += elt;
-		}
-
-		return values;
 	}
 }

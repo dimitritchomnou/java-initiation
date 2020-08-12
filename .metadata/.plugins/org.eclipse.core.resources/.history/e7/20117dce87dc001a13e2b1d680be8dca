@@ -154,11 +154,8 @@ public class Personne {
 		
 		System.out.println("----------Tableau simple une dimension ----------");
 		String chaine[] = {"Ariane", "Ludo", "Juju", "Dima", "Yaya"};
-	
-		System.out.println("----------Call Method Table Content ----------");
 		//call method
 		tableContent(chaine);
-		System.out.println(tableContentToString(chaine));
 	}
 	
 	

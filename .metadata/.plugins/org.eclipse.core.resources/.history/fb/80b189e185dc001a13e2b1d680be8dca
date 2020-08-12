@@ -154,32 +154,15 @@ public class Personne {
 		
 		System.out.println("----------Tableau simple une dimension ----------");
 		String chaine[] = {"Ariane", "Ludo", "Juju", "Dima", "Yaya"};
-	
-		System.out.println("----------Call Method Table Content ----------");
-		//call method
-		tableContent(chaine);
-		System.out.println(tableContentToString(chaine));
-	}
-	
-	
-	public static double arrondi(double A, int B) {
-		return (double)((int)(A * Math.pow(10, B) + .5) / Math.pow(10, B));
-	}
-	
-	public static void tableContent(String tab[]) {
 		int k = 0;
-		for(String elt : tab) {
+		for(String elt : chaine) {
 			System.out.println("chaine["+k+"] = " + elt);
 			k++;
 		}
 	}
 	
-	public static String tableContentToString(String[] stringTab) {
-		String values = "";
-		for(String elt : stringTab) {
-			 values += elt;
-		}
-
-		return values;
+	
+	public static double arrondi(double A, int B) {
+		return (double)((int)(A * Math.pow(10, B) + .5) / Math.pow(10, B));
 	}
 }
