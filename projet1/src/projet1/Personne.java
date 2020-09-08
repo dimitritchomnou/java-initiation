@@ -1,11 +1,189 @@
 package projet1;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.DataInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.Scanner;
 
 public class Personne {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		Ville ville = null;
+		try {
+			 ville = new Ville("Paris", "France", -2000);
+		}catch(NombreHabitantException e) {
+			
+		}
+		finally {
+			if(ville == null) {
+				ville = new Ville();
+			}
+			System.out.println(ville.decrisToi());
+		}
+		
+		
+//		Lecture/Ecriture dans un fichier
+		System.out.println("------------------ Traitement de fichier ------------------------");
+		
+		File file = new File("fileJava.txt");
+		System.out.println("Chemin absolu du fichier : " + file.getAbsolutePath());
+		System.out.println("Nom du fihier : " + file.getName());
+		System.out.println("Est-ce qu'il existe ? : " + file.exists());
+		System.out.println("Est-ce un répertoire ? : " + file.isDirectory());
+		System.out.println("Est-ce un fichier : ? " + file.isFile());
+		
+
+		
+
+/**
+ * Les Object ObjectOutputStream
+ * et ObjectInputStream
+ */
+		//Fichier, Object Sérialisable
+		//lecture
+		ObjectInputStream ois;
+		//Ecriture
+		ObjectOutputStream oos;
+		
+		try {
+			oos = new ObjectOutputStream(
+					new BufferedOutputStream(
+							new FileOutputStream(
+									new File("game.txt"))));
+			//Ecriture de chaque objet Game dans le fichier
+			oos.writeObject(new Game("Assasin Creed", "Aventure", 45.69));
+			oos.writeObject(new Game("Tomb Raider", "Plateforme", 23.69));
+			oos.writeObject(new Game("Mario Card", "Aventure", 35.69));
+			//On ferme le fichier
+			oos.close();
+			
+			//On recupère les données 
+			ois = new ObjectInputStream(
+					new BufferedInputStream(
+							new FileInputStream(
+									new File("game.txt"))));
+			
+			try {
+				System.out.println("Affichage des jeux : ");
+				System.out.println("***********************\n");
+				System.out.println(((Game)ois.readObject()).toString());
+				System.out.println(((Game)ois.readObject()).toString());
+				System.out.println(((Game)ois.readObject()).toString());
+				System.out.println("***********************\n");
+			}catch(ClassNotFoundException e) {
+				e.printStackTrace();
+			}
+			
+		}catch(FileNotFoundException e) {
+			e.printStackTrace();
+		}catch(IOException e) {
+			e.printStackTrace();
+		}
+		
+		
+/**
+ * Code qui teste le temps d'exercution du fichier
+ * 
+ */
+		
+//		
+//		System.out.println("-------------- Code qui teste le temps d'exercution du fichier ---------------------");
+//		
+//		//Obj pour lecture 
+//		FileInputStream fis;
+//		BufferedInputStream bis;
+//		
+//		//Obj pour Ecriture
+//		BufferedOutputStream bos;
+//		FileOutputStream fos;
+//		
+//		try {
+//			//Déclaration des objets
+//			fis = new FileInputStream(new File("fileJava.txt"));
+//			fos = new FileOutputStream(new File("text2.txt"));
+//			bis = new BufferedInputStream(new FileInputStream(new File("fileJava.txt")));
+//			bos = new BufferedOutputStream(new FileOutputStream(new File("text3.txt")));
+//			byte[] buf = new byte[8];
+//			//Recupération du temps du temps du système
+//			long startTime = System.currentTimeMillis();
+//			while(fis.read(buf) != -1) {
+//				fos.write(buf);
+//			}
+//			System.out.println("Temps de la lecture + écriture avec FileInputStream et FileOutputStream : " + (System.currentTimeMillis() - startTime));
+//			//On rénitialise 
+//			startTime = System.currentTimeMillis();
+//			while(bis.read(buf) != -1) {
+//				bos.write(buf);
+//			}
+//			System.out.println("Temps de la lecture et écriture avec BufferedInputStream et BufferedOutputStream : " + (System.currentTimeMillis() - startTime));
+//			//Fermeture de nos flux
+//			fis.close();
+//			bis.close();
+//			fos.close();
+//			bos.close();
+//		}catch(FileNotFoundException e) {
+//			e.printStackTrace();
+//		}catch(IOException e) {
+//			e.printStackTrace();
+//		}
+
+//		BufferedInputStream biss = new BufferedInputStream(
+//									new DataInputStream(
+//											new FileInputStream(
+//												new File("fileJava.txt"))));
+		
+		
+		/*Ville villeParis = new Ville("Paris", "France", 123435);
+		Ville maVille1 = new Ville();
+		
+		Capitale cap = new Capitale("Paris", "France", 1230033, "Le Louvre");
+		
+		System.out.println(cap.decrisToi());
+		cap.setMonument("Château de Vincenne");
+		System.out.println(cap.decrisToi());*/
+		
+		//Test class utilisation class abstraite
+		
+		//Animal loup = new Loup("Blanc", 145);
+		Chien chien = new Chien("Blanc", 145);
+		chien.deplacement();
+		chien.boire();
+		chien.crier();
+		chien.manger();
+		
+		System.out.println(chien.toString());
+		
+		System.out.println("---------------------------------------");
+		
+		chien.faireCalin();
+		chien.faireLebeau();
+		chien.faireLechouille();
+		
+		System.out.println("---------------------------------------");
+		
+		//Utilisation du polymorphisme de notre Interface
+		Rintintin rint = new Chien();
+		rint.faireCalin();
+		rint.faireLebeau();
+		rint.faireLechouille();
+		
+		
+		/*
+		//Use getters
+		System.out.println(villeParis.getNomPays());
+		//Use setters
+		villeParis.setNomVille("Belgique");
+		
+		//New valeur
+		System.out.println(villeParis.getNomVille());
 		
 		//lecture d'entrer du clavier
 		Scanner sc = new Scanner(System.in);
@@ -65,7 +243,7 @@ public class Personne {
 		System.out.println("Find de la boucle ...");*/
 		
 		//TP Conversion Celsius en Fahrenheit
-		double celsius = 0.0, fahrenheit = 0.0;
+		/*double celsius = 0.0, fahrenheit = 0.0;
 		int choix = 1;
 		char rpse = 'O';
 		
@@ -158,7 +336,7 @@ public class Personne {
 		System.out.println("----------Call Method Table Content ----------");
 		//call method
 		tableContent(chaine);
-		System.out.println(tableContentToString(chaine));
+		System.out.println(tableContentToString(chaine));*/
 	}
 	
 	

@@ -14,4 +14,11 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>fileJava.txt</name>
+			<type>1</type>
+			<location>C:/Users/dtchomnou/Documents/Java-projects/projet1/fileJava.txt</location>
+		</link>
+	</linkedResources>
 </projectDescription>

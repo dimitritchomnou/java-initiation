@@ -1,2 +1,263 @@
 2020-08-07 00:12:36,494 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is not available. Remote download required.
 2020-08-07 10:30:26,434 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-08-17 15:36:44,717 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-08-26 09:27:18,866 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-08-26 23:48:15,634 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-08-27 11:38:10,976 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-09-01 12:02:36,899 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-09-01 12:03:05,867 [Worker-2: Auto share git projects] ERROR org.eclipse.jgit.util.SystemReader - Creating XDG_CONFIG_HOME directory V:\.config failed
+java.nio.file.FileSystemException: V:\.config: Unable to determine if root directory exists
+	at java.base/java.nio.file.Files.createDirectories(Unknown Source) ~[na:na]
+	at org.eclipse.jgit.util.SystemReader$Default.getXDGConfigHome(SystemReader.java:153) [org.eclipse.jgit_5.6.0.201912101111-r.jar:5.6.0.201912101111-r]
+	at org.eclipse.jgit.util.SystemReader$Default.openJGitConfig(SystemReader.java:164) [org.eclipse.jgit_5.6.0.201912101111-r.jar:5.6.0.201912101111-r]
+	at org.eclipse.jgit.util.SystemReader.getJGitConfig(SystemReader.java:381) [org.eclipse.jgit_5.6.0.201912101111-r.jar:5.6.0.201912101111-r]
+	at org.eclipse.jgit.util.SystemReader.getSystemConfig(SystemReader.java:406) [org.eclipse.jgit_5.6.0.201912101111-r.jar:5.6.0.201912101111-r]
+	at org.eclipse.jgit.util.SystemReader.getUserConfig(SystemReader.java:354) [org.eclipse.jgit_5.6.0.201912101111-r.jar:5.6.0.201912101111-r]
+	at org.eclipse.egit.core.Activator$EclipseSystemReader.getUserConfig(Activator.java:1177) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.jgit.internal.storage.file.FileRepository.<init>(FileRepository.java:191) [org.eclipse.jgit_5.6.0.201912101111-r.jar:5.6.0.201912101111-r]
+	at org.eclipse.egit.core.CachingRepository.<init>(CachingRepository.java:40) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.core.RepositoryCache$Builder.createRepository(RepositoryCache.java:211) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.core.RepositoryCache.lookupRepository(RepositoryCache.java:142) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.core.project.GitProjectData.map(GitProjectData.java:692) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.core.project.GitProjectData.remapAll(GitProjectData.java:650) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.core.project.GitProjectData.setRepositoryMappings(GitProjectData.java:464) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.core.op.ConnectProviderOperation.connectProject(ConnectProviderOperation.java:153) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.core.op.ConnectProviderOperation.execute(ConnectProviderOperation.java:111) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.core.internal.job.JobUtil$1.run(JobUtil.java:55) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) [org.eclipse.core.jobs_3.10.600.v20191122-2104.jar:na]
+2020-09-01 12:03:09,972 [ForkJoinPool.commonPool-worker-9] ERROR org.eclipse.jgit.util.FS - Cannot save config file 'FileBasedConfig[V:\.jgitconfig]'
+java.io.IOException: Creating directories for V:\ failed
+	at org.eclipse.jgit.util.FileUtils.mkdirs(FileUtils.java:428) ~[org.eclipse.jgit_5.6.0.201912101111-r.jar:5.6.0.201912101111-r]
+	at org.eclipse.jgit.internal.storage.file.LockFile.lock(LockFile.java:163) ~[org.eclipse.jgit_5.6.0.201912101111-r.jar:5.6.0.201912101111-r]
+	at org.eclipse.jgit.storage.file.FileBasedConfig.save(FileBasedConfig.java:252) ~[org.eclipse.jgit_5.6.0.201912101111-r.jar:5.6.0.201912101111-r]
+	at org.eclipse.jgit.util.FS$FileStoreAttributes.saveToConfig(FS.java:586) [org.eclipse.jgit_5.6.0.201912101111-r.jar:5.6.0.201912101111-r]
+	at org.eclipse.jgit.util.FS$FileStoreAttributes.lambda$0(FS.java:367) [org.eclipse.jgit_5.6.0.201912101111-r.jar:5.6.0.201912101111-r]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source) ~[na:na]
+2020-09-01 14:57:28,498 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-09-01 16:24:03,211 [Worker-35: Creating project "theatre"] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: tdd:theatre:0.0.1-SNAPSHOT @ C:\Users\dtchomnou\Documents\Java-projects\theatre\pom.xml.
+2020-09-01 16:24:03,588 [Worker-35: Creating project "theatre"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /theatre/src/main/java
+2020-09-01 16:24:03,590 [Worker-35: Creating project "theatre"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /theatre/src/main/resources
+2020-09-01 16:24:03,591 [Worker-35: Creating project "theatre"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /theatre/src/test/java
+2020-09-01 16:24:03,591 [Worker-35: Creating project "theatre"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /theatre/src/test/resources
+2020-09-01 16:24:03,875 [Worker-35: Auto share git projects] ERROR org.eclipse.jgit.util.SystemReader - Creating XDG_CONFIG_HOME directory V:\.config failed
+java.nio.file.FileSystemException: V:\.config: Unable to determine if root directory exists
+	at java.base/java.nio.file.Files.createDirectories(Unknown Source) ~[na:na]
+	at org.eclipse.jgit.util.SystemReader$Default.getXDGConfigHome(SystemReader.java:153) [org.eclipse.jgit_5.6.0.201912101111-r.jar:5.6.0.201912101111-r]
+	at org.eclipse.jgit.util.SystemReader$Default.openJGitConfig(SystemReader.java:164) [org.eclipse.jgit_5.6.0.201912101111-r.jar:5.6.0.201912101111-r]
+	at org.eclipse.jgit.util.SystemReader.getJGitConfig(SystemReader.java:381) [org.eclipse.jgit_5.6.0.201912101111-r.jar:5.6.0.201912101111-r]
+	at org.eclipse.jgit.util.SystemReader.getSystemConfig(SystemReader.java:406) [org.eclipse.jgit_5.6.0.201912101111-r.jar:5.6.0.201912101111-r]
+	at org.eclipse.jgit.util.SystemReader.getUserConfig(SystemReader.java:354) [org.eclipse.jgit_5.6.0.201912101111-r.jar:5.6.0.201912101111-r]
+	at org.eclipse.egit.core.Activator$EclipseSystemReader.getUserConfig(Activator.java:1177) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.jgit.internal.storage.file.FileRepository.<init>(FileRepository.java:191) [org.eclipse.jgit_5.6.0.201912101111-r.jar:5.6.0.201912101111-r]
+	at org.eclipse.egit.core.CachingRepository.<init>(CachingRepository.java:40) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.core.RepositoryCache$Builder.createRepository(RepositoryCache.java:211) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.core.RepositoryCache.lookupRepository(RepositoryCache.java:142) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.core.project.GitProjectData.map(GitProjectData.java:692) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.core.project.GitProjectData.remapAll(GitProjectData.java:650) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.core.project.GitProjectData.setRepositoryMappings(GitProjectData.java:464) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.core.op.ConnectProviderOperation.connectProject(ConnectProviderOperation.java:153) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.core.op.ConnectProviderOperation.execute(ConnectProviderOperation.java:111) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.core.internal.job.JobUtil$1.run(JobUtil.java:55) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) [org.eclipse.core.jobs_3.10.600.v20191122-2104.jar:na]
+2020-09-01 16:24:05,101 [Worker-10: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 16:24:05,112 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 16:24:05,115 [Worker-10: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 16:24:05,118 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 16:24:07,659 [ForkJoinPool.commonPool-worker-9] ERROR org.eclipse.jgit.util.FS - Cannot save config file 'FileBasedConfig[V:\.jgitconfig]'
+java.io.IOException: Creating directories for V:\ failed
+	at org.eclipse.jgit.util.FileUtils.mkdirs(FileUtils.java:428) ~[org.eclipse.jgit_5.6.0.201912101111-r.jar:5.6.0.201912101111-r]
+	at org.eclipse.jgit.internal.storage.file.LockFile.lock(LockFile.java:163) ~[org.eclipse.jgit_5.6.0.201912101111-r.jar:5.6.0.201912101111-r]
+	at org.eclipse.jgit.storage.file.FileBasedConfig.save(FileBasedConfig.java:252) ~[org.eclipse.jgit_5.6.0.201912101111-r.jar:5.6.0.201912101111-r]
+	at org.eclipse.jgit.util.FS$FileStoreAttributes.saveToConfig(FS.java:586) [org.eclipse.jgit_5.6.0.201912101111-r.jar:5.6.0.201912101111-r]
+	at org.eclipse.jgit.util.FS$FileStoreAttributes.lambda$0(FS.java:367) [org.eclipse.jgit_5.6.0.201912101111-r.jar:5.6.0.201912101111-r]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source) ~[na:na]
+2020-09-01 16:24:35,635 [Worker-37: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 16:24:35,639 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 16:24:35,641 [Worker-37: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 16:24:35,644 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 16:24:58,112 [Worker-33: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 16:24:58,116 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 16:24:58,118 [Worker-33: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 16:24:58,123 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 16:26:27,259 [Worker-33: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 16:26:27,260 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 16:26:27,262 [Worker-33: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 16:26:27,264 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 16:27:25,044 [Worker-35: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 16:27:25,046 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 16:27:25,049 [Worker-35: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 16:27:25,052 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 16:29:28,382 [Worker-10: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 16:29:28,386 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 16:29:28,387 [Worker-10: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 16:29:28,390 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 16:32:03,064 [Worker-38: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 16:32:03,066 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 16:32:03,067 [Worker-38: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 16:32:03,070 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 16:32:44,725 [Worker-39: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 16:32:44,727 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 16:32:44,729 [Worker-39: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 16:32:44,731 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 16:33:21,655 [Worker-37: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 16:33:21,658 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 16:33:21,658 [Worker-37: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 16:33:21,660 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 16:33:54,527 [Worker-37: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 16:33:54,528 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 16:33:54,530 [Worker-37: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 16:33:54,532 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 16:34:34,029 [Worker-39: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 16:34:34,030 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 16:34:34,032 [Worker-39: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 16:34:34,034 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 16:34:40,875 [Worker-35: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 16:34:40,877 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 16:34:40,878 [Worker-35: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 16:34:40,880 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 16:35:18,944 [Worker-33: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 16:35:18,946 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 16:35:18,947 [Worker-33: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 16:35:18,949 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 16:39:48,122 [Worker-10: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 16:39:48,124 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 16:39:48,126 [Worker-10: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 16:39:48,128 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 16:40:22,385 [Worker-40: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 16:40:22,387 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 16:40:22,388 [Worker-40: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 16:40:22,390 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 16:41:23,906 [Worker-39: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 16:41:23,909 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 16:41:23,912 [Worker-39: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 16:41:23,914 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 16:46:59,757 [Worker-10: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 16:46:59,760 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 16:46:59,761 [Worker-10: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 16:46:59,763 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 17:00:19,432 [Worker-38: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 17:00:19,435 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 17:00:19,436 [Worker-38: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 17:00:19,439 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 17:00:33,348 [Worker-41: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 17:00:33,349 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 17:00:33,350 [Worker-41: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 17:00:33,352 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 17:03:02,763 [Worker-40: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 17:03:02,765 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 17:03:02,766 [Worker-40: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 17:03:02,768 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 17:03:07,117 [Worker-41: Launching TheatreTest] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 17:03:07,119 [Worker-41: Launching TheatreTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 17:03:07,122 [Worker-41: Launching TheatreTest] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 17:03:07,125 [Worker-41: Launching TheatreTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 17:03:34,757 [Worker-35: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 17:03:34,760 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 17:03:34,761 [Worker-35: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 17:03:34,764 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 17:03:57,782 [Worker-10: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 17:03:57,784 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-01 17:03:57,786 [Worker-10: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-01 17:03:57,788 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-02 16:09:14,888 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-09-02 16:09:28,654 [Worker-1: Decoration Calculation] ERROR org.eclipse.jgit.util.SystemReader - Creating XDG_CONFIG_HOME directory V:\.config failed
+java.nio.file.FileSystemException: V:\.config: Unable to determine if root directory exists
+	at java.base/java.nio.file.Files.createDirectories(Unknown Source) ~[na:na]
+	at org.eclipse.jgit.util.SystemReader$Default.getXDGConfigHome(SystemReader.java:153) [org.eclipse.jgit_5.6.0.201912101111-r.jar:5.6.0.201912101111-r]
+	at org.eclipse.jgit.util.SystemReader$Default.openJGitConfig(SystemReader.java:164) [org.eclipse.jgit_5.6.0.201912101111-r.jar:5.6.0.201912101111-r]
+	at org.eclipse.jgit.util.SystemReader.getJGitConfig(SystemReader.java:381) [org.eclipse.jgit_5.6.0.201912101111-r.jar:5.6.0.201912101111-r]
+	at org.eclipse.jgit.util.SystemReader.getSystemConfig(SystemReader.java:406) [org.eclipse.jgit_5.6.0.201912101111-r.jar:5.6.0.201912101111-r]
+	at org.eclipse.jgit.util.SystemReader.getUserConfig(SystemReader.java:354) [org.eclipse.jgit_5.6.0.201912101111-r.jar:5.6.0.201912101111-r]
+	at org.eclipse.egit.core.Activator$EclipseSystemReader.getUserConfig(Activator.java:1177) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.jgit.internal.storage.file.FileRepository.<init>(FileRepository.java:191) [org.eclipse.jgit_5.6.0.201912101111-r.jar:5.6.0.201912101111-r]
+	at org.eclipse.egit.core.CachingRepository.<init>(CachingRepository.java:40) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.core.RepositoryCache$Builder.createRepository(RepositoryCache.java:211) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.core.RepositoryCache.lookupRepository(RepositoryCache.java:142) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.core.project.GitProjectData.map(GitProjectData.java:692) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.core.project.GitProjectData.remapAll(GitProjectData.java:650) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.core.project.GitProjectData.load(GitProjectData.java:633) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.core.project.GitProjectData.get(GitProjectData.java:219) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.core.project.RepositoryMapping.getProjectData(RepositoryMapping.java:335) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.core.project.RepositoryMapping.findMapping(RepositoryMapping.java:356) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.core.project.RepositoryMapping.getMapping(RepositoryMapping.java:296) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.core.internal.util.ResourceUtil.getRepository(ResourceUtil.java:709) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.ui.internal.resources.ResourceStateFactory.getIndexDiffDataOrNull(ResourceStateFactory.java:103) [org.eclipse.egit.ui_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:223) [org.eclipse.egit.ui_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201) [org.eclipse.egit.ui_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247) [org.eclipse.ui.workbench_3.117.0.v20191126-1131.jar:na]
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105) [org.eclipse.ui.workbench_3.117.0.v20191126-1131.jar:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) [org.eclipse.equinox.common_3.10.600.v20191004-1420.jar:na]
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360) [org.eclipse.ui.workbench_3.117.0.v20191126-1131.jar:na]
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346) [org.eclipse.ui.workbench_3.117.0.v20191126-1131.jar:na]
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386) [org.eclipse.ui.workbench_3.117.0.v20191126-1131.jar:na]
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362) [org.eclipse.ui.workbench_3.117.0.v20191126-1131.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) [org.eclipse.core.jobs_3.10.600.v20191122-2104.jar:na]
+2020-09-02 16:09:33,133 [ForkJoinPool.commonPool-worker-9] ERROR org.eclipse.jgit.util.FS - Cannot save config file 'FileBasedConfig[V:\.jgitconfig]'
+java.io.IOException: Creating directories for V:\ failed
+	at org.eclipse.jgit.util.FileUtils.mkdirs(FileUtils.java:428) ~[org.eclipse.jgit_5.6.0.201912101111-r.jar:5.6.0.201912101111-r]
+	at org.eclipse.jgit.internal.storage.file.LockFile.lock(LockFile.java:163) ~[org.eclipse.jgit_5.6.0.201912101111-r.jar:5.6.0.201912101111-r]
+	at org.eclipse.jgit.storage.file.FileBasedConfig.save(FileBasedConfig.java:252) ~[org.eclipse.jgit_5.6.0.201912101111-r.jar:5.6.0.201912101111-r]
+	at org.eclipse.jgit.util.FS$FileStoreAttributes.saveToConfig(FS.java:586) [org.eclipse.jgit_5.6.0.201912101111-r.jar:5.6.0.201912101111-r]
+	at org.eclipse.jgit.util.FS$FileStoreAttributes.lambda$0(FS.java:367) [org.eclipse.jgit_5.6.0.201912101111-r.jar:5.6.0.201912101111-r]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source) ~[na:na]
+2020-09-04 15:15:58,564 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-09-04 15:16:00,152 [Worker-3: Decoration Calculation] ERROR org.eclipse.jgit.util.SystemReader - Creating XDG_CONFIG_HOME directory V:\.config failed
+java.nio.file.FileSystemException: V:\.config: Unable to determine if root directory exists
+	at java.base/java.nio.file.Files.createDirectories(Unknown Source) ~[na:na]
+	at org.eclipse.jgit.util.SystemReader$Default.getXDGConfigHome(SystemReader.java:153) [org.eclipse.jgit_5.6.0.201912101111-r.jar:5.6.0.201912101111-r]
+	at org.eclipse.jgit.util.SystemReader$Default.openJGitConfig(SystemReader.java:164) [org.eclipse.jgit_5.6.0.201912101111-r.jar:5.6.0.201912101111-r]
+	at org.eclipse.jgit.util.SystemReader.getJGitConfig(SystemReader.java:381) [org.eclipse.jgit_5.6.0.201912101111-r.jar:5.6.0.201912101111-r]
+	at org.eclipse.jgit.util.SystemReader.getSystemConfig(SystemReader.java:406) [org.eclipse.jgit_5.6.0.201912101111-r.jar:5.6.0.201912101111-r]
+	at org.eclipse.jgit.util.SystemReader.getUserConfig(SystemReader.java:354) [org.eclipse.jgit_5.6.0.201912101111-r.jar:5.6.0.201912101111-r]
+	at org.eclipse.egit.core.Activator$EclipseSystemReader.getUserConfig(Activator.java:1177) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.jgit.internal.storage.file.FileRepository.<init>(FileRepository.java:191) [org.eclipse.jgit_5.6.0.201912101111-r.jar:5.6.0.201912101111-r]
+	at org.eclipse.egit.core.CachingRepository.<init>(CachingRepository.java:40) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.core.RepositoryCache$Builder.createRepository(RepositoryCache.java:211) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.core.RepositoryCache.lookupRepository(RepositoryCache.java:142) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.core.project.GitProjectData.map(GitProjectData.java:692) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.core.project.GitProjectData.remapAll(GitProjectData.java:650) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.core.project.GitProjectData.load(GitProjectData.java:633) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.core.project.GitProjectData.get(GitProjectData.java:219) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.core.project.RepositoryMapping.getProjectData(RepositoryMapping.java:335) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.core.project.RepositoryMapping.findMapping(RepositoryMapping.java:356) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.core.project.RepositoryMapping.getMapping(RepositoryMapping.java:296) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.core.internal.util.ResourceUtil.getRepository(ResourceUtil.java:709) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.ui.internal.resources.ResourceStateFactory.getIndexDiffDataOrNull(ResourceStateFactory.java:103) [org.eclipse.egit.ui_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:223) [org.eclipse.egit.ui_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201) [org.eclipse.egit.ui_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247) [org.eclipse.ui.workbench_3.117.0.v20191126-1131.jar:na]
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105) [org.eclipse.ui.workbench_3.117.0.v20191126-1131.jar:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) [org.eclipse.equinox.common_3.10.600.v20191004-1420.jar:na]
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360) [org.eclipse.ui.workbench_3.117.0.v20191126-1131.jar:na]
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346) [org.eclipse.ui.workbench_3.117.0.v20191126-1131.jar:na]
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386) [org.eclipse.ui.workbench_3.117.0.v20191126-1131.jar:na]
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362) [org.eclipse.ui.workbench_3.117.0.v20191126-1131.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) [org.eclipse.core.jobs_3.10.600.v20191122-2104.jar:na]
+2020-09-04 15:16:04,629 [ForkJoinPool.commonPool-worker-9] ERROR org.eclipse.jgit.util.FS - Cannot save config file 'FileBasedConfig[V:\.jgitconfig]'
+java.io.IOException: Creating directories for V:\ failed
+	at org.eclipse.jgit.util.FileUtils.mkdirs(FileUtils.java:428) ~[org.eclipse.jgit_5.6.0.201912101111-r.jar:5.6.0.201912101111-r]
+	at org.eclipse.jgit.internal.storage.file.LockFile.lock(LockFile.java:163) ~[org.eclipse.jgit_5.6.0.201912101111-r.jar:5.6.0.201912101111-r]
+	at org.eclipse.jgit.storage.file.FileBasedConfig.save(FileBasedConfig.java:252) ~[org.eclipse.jgit_5.6.0.201912101111-r.jar:5.6.0.201912101111-r]
+	at org.eclipse.jgit.util.FS$FileStoreAttributes.saveToConfig(FS.java:586) [org.eclipse.jgit_5.6.0.201912101111-r.jar:5.6.0.201912101111-r]
+	at org.eclipse.jgit.util.FS$FileStoreAttributes.lambda$0(FS.java:367) [org.eclipse.jgit_5.6.0.201912101111-r.jar:5.6.0.201912101111-r]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source) ~[na:na]
+2020-09-04 15:20:06,174 [Worker-3: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-04 15:20:06,190 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-09-04 15:20:06,195 [Worker-3: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-04 15:20:06,198 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
